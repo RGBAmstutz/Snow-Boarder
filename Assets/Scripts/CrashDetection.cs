@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class CrashDetection : MonoBehaviour
 {
     [SerializeField] float sceneTransitionEase = 1f;
+    [SerializeField] ParticleSystem crashEffect;
     CircleCollider2D circleCollider2D;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,7 @@ public class CrashDetection : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Ground")
         {
+            crashEffect.Play();
             Debug.Log("Oof you hit your head!");
             Invoke("ReloadScene", sceneTransitionEase);
         }
