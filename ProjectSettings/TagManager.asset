@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Boarder Top
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Background Image
   - Water
   - UI
-  - 
+  - Finish Line
   - 
   - 
   - 
